@@ -1,3 +1,26 @@
+<?php
+// $host = "localhost";
+// $username = "root";
+// $password = "";
+// $database = "adminsql";
+
+// //connection
+
+// $con = mysqli_connect($host, $username, $password, $database);
+
+// // check connection
+// if (!$con) {
+//     die("database not connected");
+// }
+
+// function dd($data){
+//     echo '<pre>';
+//     print_r($data);
+//     exit;
+// }
+
+echo($_POST);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +53,7 @@
             <div class="col-md-5 my-3">
                 <div class="card my-5">
                     <div class="card-header bg-light">
-                        <h5>registration form</h5>
+                        <h5>Registration form</h5>
                     </div>
                     <div class="card-body">
                         <!-- <div id="message">

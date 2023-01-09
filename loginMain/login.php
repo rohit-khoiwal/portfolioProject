@@ -12,7 +12,7 @@ require_once("includes/header.php");?>
                         <h5>Login form</h5>
                     </div>
                     <div class="card-body">
-                        <form action="login.php" onsubmit="onSubmitForm(event)" method="POST" id="login_form">
+                        <form action="loginMain/admin.php" method="POST" id="login_form">
                             <div class="form-group">
                                 <label for="">Username</label>
                                 <input type="text" name="username" class="form-control" id="username"
@@ -41,39 +41,39 @@ require_once("includes/header.php");?>
 </div>
 
 <script>
-function onSubmitForm(e) {
-    e.preventDefault();
-    var error = 0;
-    $('.error').hide();
-    if (!$('#username').val()) {
-        $('#username_error').show().html("please fill username");
-        error++;
-    }
-    if (!$('#password').val()) {
-        $('#password_error').show().html("please fill password");
-        error++;
-    }
+// function onSubmitForm(e) {
+//     e.preventDefault();
+//     var error = 0;
+//     $('.error').hide();
+//     if (!$('#username').val()) {
+//         $('#username_error').show().html("please fill username");
+//         error++;
+//     }
+//     if (!$('#password').val()) {
+//         $('#password_error').show().html("please fill password");
+//         error++;
+//     }
 
-    if (error == 0) {
-        var username = $('#username').val();
-        var password = $('#password').val();
-        $.ajax({
-            url: "logincheck.php",
-            type: "post",
-            data: {
-                username: username,
-                password: password
-            },
-            success: function(data) {
-                if (data.status == 200) {
-                    window.location = 'index.php';
-                } else {
-                    $('#password_error').show().html(data.message);
-                }
-            }
-        });
-    }
-}
+//     if (error == 0) {
+//         var username = $('#username').val();
+//         var password = $('#password').val();
+//         $.ajax({
+//             url: "logincheck.php",
+//             type: "post",
+//             data: {
+//                 username: username,
+//                 password: password
+//             },
+//             success: function(data) {
+//                 if (data.status == 200) {
+//                     window.location = 'admin.php';
+//                 } else {
+//                     $('#password_error').show().html(data.message);
+//                 }
+//             }
+//         });
+//     }
+// }
 </script>
 
 
